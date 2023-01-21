@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('Year');
             $table->string('Mark');
             $table->string('Model');
+            $table->integer('Size');
             $table->timestamps();
         });
     }
