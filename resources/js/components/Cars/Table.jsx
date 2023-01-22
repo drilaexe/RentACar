@@ -1,17 +1,24 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 class Table extends Component {
 
-constructor(props){
-    super(props);
-    this.state={
-        cars:[],
-        
+    constructor(props) {
+        super(props);
+        this.state = {
+            cars: [],
+
+        }
     }
-}
 
+    //lofe cycle method
+    componentDidMount() {
+        this.getCarsList();
+    }
     getCarsList = () => {
-
+        axios.get('/get/cars/list').then(function (res) {
+            console.log(res);
+        })
     }
 
     render() {

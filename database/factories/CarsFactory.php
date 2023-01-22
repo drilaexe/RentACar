@@ -18,6 +18,11 @@ class CarsFactory extends Factory
     {
         return [
             //
+           'Name'=>$this->faker->name(),
+           'Year'=>$this->faker->numberBetween(2000,date('Y')),
+           'Mark'=>$this->faker->name(),
+           'Model'=>$this->faker->name(),
+           'Size'=>$this->faker->numberBetween(2,8)
         ];
     }
 }
